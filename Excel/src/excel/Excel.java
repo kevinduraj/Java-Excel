@@ -25,6 +25,18 @@ public class Excel {
         Sheet1 static1 = new Sheet1(workbook);
         static1.run();
 
+        Sheet2 static2 = new Sheet2(workbook);
+        static2.run();
+        
+        try {
+            FileOutputStream output = new FileOutputStream("/Users/kevinduraj/Desktop/kevin.xls");
+            workbook.write(output);
+            output.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
     }
 
 }

@@ -5,34 +5,30 @@ import java.util.ArrayList;
 import java.util.List;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
-class Sheet1 {
+class Sheet2 {
 
     Workbook workbook;
-    Cell cell;
+    Sheet sheet;
 
-    public Sheet1(Workbook workbook) {
+    public Sheet2(Workbook workbook) {
         this.workbook = workbook;
+        sheet = workbook.createSheet("Stat-2");
     }
 
     public void run() {
 
-        Sheet sheet = workbook.createSheet("Stat-1");
-
-        List<Cell> cells = new ArrayList<>();
-
         for (int i = 0; i < 10; i++) {
+            Row row = sheet.createRow(i);
+
             for (int j = 0; j < 10; j++) {
-                cell = sheet.createRow(i).createCell(j);
-                cells.add(cell);
+                Cell cell = row.createCell(j);
+                cell.setCellValue(1 + (int) (Math.random() * 100));
             }
         }
-
-        for (Cell one : cells) {
-            one.setCellValue(1 + (int) (Math.random() * 100));
-        }
-
     }
+
 }
