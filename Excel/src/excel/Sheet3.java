@@ -9,6 +9,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
+/*----------------------------------------------------------------------------*/
 class Sheet3 {
 
     Workbook workbook;
@@ -40,7 +41,7 @@ class Sheet3 {
     }
     /*------------------------------------------------------------------------*/
 
-    public void run() {
+    public void randomValues() {
 
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
@@ -63,3 +64,4 @@ class Sheet3 {
 
     /*------------------------------------------------------------------------*/
 }
+/*---------------------------------Sheet3-------------------------------------*/

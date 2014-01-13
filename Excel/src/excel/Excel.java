@@ -29,7 +29,9 @@ public class Excel {
         sheet2.run();
         
         Sheet3 sheet3 = new Sheet3(workbook);
-        sheet3.run();        
+        sheet3.randomValues();
+        sheet3.cellValue(2,2,2);   
+        
         
         try {
             FileOutputStream output = new FileOutputStream("/Users/kevinduraj/Desktop/kevin.xls");
