@@ -22,11 +22,14 @@ public class Excel {
 
         Workbook workbook = new HSSFWorkbook();
 
-        Sheet1 static1 = new Sheet1(workbook);
-        static1.run();
+        Sheet1 sheet1 = new Sheet1(workbook);
+        sheet1.run();
 
-        Sheet2 static2 = new Sheet2(workbook);
-        static2.run();
+        Sheet2 sheet2 = new Sheet2(workbook);
+        sheet2.run();
+        
+        Sheet3 sheet3 = new Sheet3(workbook);
+        sheet3.run();        
         
         try {
             FileOutputStream output = new FileOutputStream("/Users/kevinduraj/Desktop/kevin.xls");
